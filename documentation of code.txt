@@ -1,0 +1,55 @@
+Database Connection and Table Creation
+
+The script starts by importing the sqlite3 module and connecting to a database file named "ice_cream_parlor.db". It then creates several tables using SQL statements:
+
+flavors: stores information about ice cream flavors (id, name, description, season)
+ingredients: stores information about ingredients (id, name, quantity)
+allergens: stores information about allergens (id, name)
+flavor_ingredients: stores relationships between flavors and ingredients (flavor_id, ingredient_id)
+customer_suggestions: stores customer suggestions for new flavors (id, customer_name, flavor_name, description)
+customer_allergens: stores customer allergen information (customer_name, allergen_id)
+carts: stores customer cart information (customer_name, flavor_id)
+
+
+Functions to Interact with the Database
+
+The script defines several functions to interact with the database:
+
+add_flavor: adds a new flavor to the flavors table
+add_ingredient: adds a new ingredient to the ingredients table
+add_allergen: adds a new allergen to the allergens table
+add_flavor_ingredient: adds a relationship between a flavor and an ingredient to the flavor_ingredients table
+add_customer_suggestion: adds a customer suggestion to the customer_suggestions table
+add_customer_allergen: adds a customer allergen to the customer_allergens table
+add_to_cart: adds a flavor to a customer's cart in the carts table
+search_flavors: searches for flavors by name
+filter_flavors: filters flavors by season
+get_cart: retrieves a customer's cart contents
+
+
+Main Function
+
+The main function is an interactive menu that allows the user to perform various actions:
+
+Add a flavor
+Add an ingredient
+Add an allergen
+Add a flavor ingredient
+Add a customer suggestion
+Add a customer allergen
+Add to cart
+Search flavors
+Filter flavors
+Get cart
+Quit
+
+This application allows users to:
+
+Maintain a cart of their favorite products
+Search for flavors by name
+Filter flavors by season
+Add allergens if they don't already exist
+
+The user is prompted to enter their choice, and the corresponding function is called with the required input parameters. The script uses a while loop to repeatedly display the menu until the user chooses to quit.
+
+Overall, this script provides a basic system for an ice cream parlor cafe, allowing users to manage flavors, ingredients, allergens, customer suggestions, and cart contents.
